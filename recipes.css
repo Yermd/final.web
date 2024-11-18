@@ -1,0 +1,571 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+}
+
+h1, h2, h3, h4, h5 {
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: #e67e22;
+}
+
+a:hover {
+    color: #d35400;
+}
+
+header {
+  background-color: #e67e22;
+}
+
+/* Navbar */
+.navbar {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+}
+
+.navbar-nav .nav-link.active {
+    color: #007bff;
+}
+
+/* General page layout */
+main.container-fluid {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Recipe Categories section */
+.category-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.category-list .btn {
+    font-size: 14px;
+    padding: 8px 16px;
+    text-transform: uppercase;
+    background-color: #e67e22;
+    border-color: #e67e22;
+}
+
+/* Popular Recipes Section */
+section h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+}
+
+section p {
+    font-size: 16px;
+    color: #666;
+}
+
+
+
+.btn-primary {
+    background-color: #e67e22;
+    border-color: #e67e22;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #d35400;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .category-list {
+        flex-direction: column;
+    }
+    
+    .card-group {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Footer */
+footer {
+    background-color: #e0ecf4;
+    color: #fff;
+}
+
+footer h2 {
+    color: #e67e22;
+    margin-bottom: 20px;
+}
+
+footer p, footer a {
+    color: #ffffff;
+    font-size: 20px
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    background-color: #2c3e50;
+    padding: 15px 0;
+    margin-top: 50px;
+}
+
+.social-icons img {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Popup Form */
+.popup-form {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+}
+
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Accordion styles */
+.accordion-header {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #f1f1f1;
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+.accordion-content {
+    max-height: 0; /* Hidden by default */
+    overflow: hidden;
+    padding: 0 10px;
+    background-color: #cce1f8;
+    border-left: 2px solid #e67e22;
+    border-right: 2px solid #e67e22;
+    border-bottom: 2px solid #e67e22;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.rating {
+    margin-top: 10px;
+    margin-left: auto;
+}
+
+.star {
+    font-size: 24px; /* Adjust the size as needed */
+    cursor: pointer;
+    color: grey; /* Default color for unselected stars */
+}
+
+.star:hover {
+    color: gold; /* Color on hover */
+}
+
+#rating-message {
+    color: #343a40;
+}
+
+/* Style for the Read More button in the About section */
+#read-more-btn {
+    background-color: #e67e22; /* Customize color */
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+#read-more-btn:hover {
+    background-color: #d35400; /* Darker shade on hover */
+}
+
+#read-more-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(248, 138, 93, 0.4); /* Adds a focus ring */
+}
+
+.multi-step-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.multi-step-form h2 {
+    text-align: center;
+    color: #e67e22;
+}
+
+.form-step {
+    display: none;
+}
+
+.form-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Animation for buttons */
+.button-animated {
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.button-animated:hover {
+    transform: scale(1.1); /* Scale effect on hover */
+    background-color: #f0f0f0; /* Lighten background on hover */
+}
+
+/* Animation for the popup */
+.popup-form {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(-20px);
+    display: none; /* Initially hidden */
+}
+
+.popup-form.show {
+    display: flex; /* Show the popup */
+    opacity: 1; /* Fade in */
+    transform: translateY(0); /* Move to position */
+}
+
+/* Recipe container styling */
+#recipe-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adds space between each recipe card */
+    justify-content: center; /* Center aligns the recipe cards */
+}
+
+/* Recipe card styling */
+.recipe-card {
+    max-width: 300px; /* Sets a maximum width for each card */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* Recipe image styling */
+.recipe-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* Recipe title styling */
+.recipe-card h3 {
+    font-size: 1.25rem;
+    margin: 10px 0;
+}
+
+/* Recipe description styling */
+.recipe-card p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.recipe-image {
+    width: 100%; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 200px; /* Set a maximum height */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+}
+
+/* Toggle Button Styles */
+#toggle-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+#mode-toggle {
+    display: none;
+}
+
+#toggle-container label {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 8px 16px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+#mode-toggle:checked + label {
+    background-color: #333;
+}
+
+#toggle-container .mode-text {
+    margin-left: 8px;
+    color: white;
+}
+
+/*
+/* Dark Mode Styles 
+body.dark-mode {
+    background-color: #343a40;
+    color: #f8f9fa;
+}
+
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode h3, 
+body.dark-mode h4, 
+body.dark-mode h5 {
+    color: #f8f9fa;
+}
+
+body.dark-mode a {
+    color: #e67e22;
+}
+
+body.dark-mode a:hover {
+    color: #f39c12;
+}
+
+body.dark-mode header {
+    background-color: #2c3e50;
+}
+
+body.dark-mode .navbar {
+    background-color: #2c3e50;
+}
+
+body.dark-mode .navbar-nav .nav-link.active {
+    color: #f39c12;
+}
+
+body.dark-mode .category-list .btn,
+body.dark-mode .btn-primary {
+    background-color: #f39c12;
+    border-color: #f39c12;
+}
+
+body.dark-mode .btn-primary:hover {
+    background-color: #e67e22;
+}
+
+body.dark-mode footer {
+    background-color: #2c3e50;
+    color: #f8f9fa;
+}
+
+body.dark-mode .footer-bottom {
+    background-color: #1b262c;
+}
+
+body.dark-mode .accordion-content {
+    background-color: #2c3e50;
+    color: #f8f9fa;
+}
+
+body.dark-mode .popup-content {
+    background-color: #3b3b3b;
+    color: #f8f9fa;
+}
+
+body.dark-mode .recipe-card {
+    background-color: #3b3b3b;
+    color: #f8f9fa;
+}
+
+body.dark-mode .accordion-header {
+    background-color: #3b3b3b;
+    color: #f8f9fa;
+}
+*/
+
+/* Dark Mode */
+.dark-mode {
+    background-color: #343a40; /* Dark background */
+    color: #f8f9fa; /* Light text */
+}
+
+.dark-mode header {
+    background-color: #555;
+    color: #f8f9fa;
+}
+
+.dark-mode h1, 
+.dark-mode h2, 
+.dark-mode h3, 
+.dark-mode h4, 
+.dark-mode h5,
+.dark-mode p {
+    color: #f8f9fa;
+}
+.dark-mode .navbar {
+    background-color: #444;
+}
+
+.dark-mode #recipe-container {
+    border-color: #444;
+    background-color: #343a40;
+}
+
+.dark-mode .card-group .card {
+    background-color: #444;
+    color: #f8f9fa;
+}
+
+.dark-mode .card-title,
+.dark-mode .card-footer {
+    color: #f8f9fa;
+}
+
+.dark-mode a {
+    color: #e67e22;
+}
+
+.dark-mode a:hover {
+    color: #d35400;
+}
+
+.dark-mode .accordion-content,
+.dark-mode .latest-articles {
+    background-color: #343a40;
+}
+
+.dark-mode #recipeForm,
+.dark-mode .multi-step-form {
+    background-color: #555;
+}
+
+.dark-mode footer {
+    background-color: #222;
+    color: #fff;
+}
+
+.dark-mode .footer-bottom {
+    background-color: #111;
+}
+
+.dark-mode .popup-content {
+    background-color: #444;
+}
+
+.popup-form {
+    margin-top: 80px;
+}
+
+/* Основной стиль профиля */
+.offcanvas-profile {
+    position: relative;
+    padding: 10px;
+}
+
+/* Кнопка профиля */
+.profile-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Иконка стрелки */
+.arrow-icon {
+    margin-left: 5px;
+}
+
+/* Выпадающее меню */
+.profile-dropdown {
+    display: none; /* По умолчанию скрыто */
+    position: absolute;
+    top: 100%; /* Расположить под кнопкой */
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 10px;
+}
+
+/* Почта и кнопка выхода */
+.profile-dropdown p {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    color: #555;
+}
+.logout-btn {
+    text-decoration: none;
+    color: #d9534f;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .category-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px; /* Расстояние между кнопками */
+        padding: 0;
+        margin: 0;
+    }
+
+    .category-list li {
+        margin: 0; /* Убираем лишние отступы */
+        flex: 1 1 calc(50% - 10px); /* Каждая кнопка занимает 50% ширины с учетом отступов */
+        list-style: none; /* Убираем точки списка */
+    }
+
+    .category-list a {
+        display: block;
+        text-align: center;
+        padding: 8px 5px; /* Уменьшенные отступы */
+        font-size: 14px; /* Уменьшенный шрифт */
+    }
+}
